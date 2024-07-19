@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <math.h>
+float a,b,c;
+void saisi (){
+printf("veuillez entrer la valeur de a :");
+scanf("%f",&a);
+printf("veuillez entrer la valeur de b :");
+scanf("%f",&b);
+printf("veuillez entrer la valeur de c :");
+scanf("%f",&c);
+
+}
+
+float discr ( ){
+    float delta;
+    delta = pow(-b,2)-(4*a*c);
+    return delta;
+
+}
+
+void solution (float D){
+    float x1,x2,x;
+if (D < 0)
+    printf("\n pas de sollution pour cette aquation");
+else if ( D == 0){
+      x = (-b)/(2*a);
+        printf("\n la  sollution pour cette aquation est %.2f",x);
+}
+
+   else{
+     x1 = (-b-sqrt(D))/(2*a);
+    x2 = (-b+sqrt(D))/(2*a);
+        printf("\n les sollutions pour cette aquation sont %.2f  et %.2f  ",x1,x2);
+   }
+
+
+
+
+
+
+}
+
+
+int main(){
+    float d;
+
+saisi();
+d = discr();
+solution(d);
+
+    return 0;
+}
+
+
+
